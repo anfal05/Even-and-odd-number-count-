@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even and Odd Numbers</title>
+</head>
+<body>
+
+    <h2>Even and Odd Number Counter</h2>
+
+    <input type="number" id="number" placeholder="Enter the number">
+    <button onclick="countNumbers()">Count</button>
+
+    <p id="result"></p>
+
+    <script>
+        function countNumbers() {
+            let num = parseInt(document.getElementById("number").value);
+
+            let even_count = 0;
+            let odd_count = 0;
+
+            for (let i = 1; i <= num; i++) {
+                if (i % 2 == 0) {
+                    even_count++;
+                } else {
+                    odd_count++;
+                }
+            }
+
+            document.getElementById("result").innerHTML =
+                "Total even numbers: " + even_count + "<br>" +
+                "Total odd numbers: " + odd_count;
+        }
+    </script>
+
+</body>
+</html>
